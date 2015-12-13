@@ -4,6 +4,7 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
@@ -200,13 +201,27 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UCD-Aa-h6x">
-                                <rect key="frame" x="277" y="149" width="46" height="30"/>
+                                <rect key="frame" x="284" y="149" width="32" height="30"/>
                                 <animations/>
-                                <state key="normal" title="Button"/>
+                                <state key="normal" title="Stop"/>
                                 <connections>
                                     <action selector="stopCountingAction:" destination="uhI-4r-QSO" eventType="touchUpInside" id="Bk9-qn-7yD"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hcp-VQ-6lh">
+                                <rect key="frame" x="421" y="230" width="119" height="20.5"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="znx-Ar-0TT">
+                                <rect key="frame" x="69" y="230" width="352" height="20.5"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -215,13 +230,21 @@
                             <constraint firstItem="9fJ-c4-QAE" firstAttribute="top" secondItem="n4c-Qh-mn2" secondAttribute="bottom" constant="18" id="98F-vV-b8w"/>
                             <constraint firstItem="5EP-am-6ff" firstAttribute="top" secondItem="a5L-g6-Sqs" secondAttribute="bottom" constant="496" id="BcN-Uq-Zo8"/>
                             <constraint firstItem="9fJ-c4-QAE" firstAttribute="centerX" secondItem="a5L-g6-Sqs" secondAttribute="centerX" id="RXy-XO-GXi"/>
+                            <constraint firstItem="Hcp-VQ-6lh" firstAttribute="top" secondItem="UCD-Aa-h6x" secondAttribute="bottom" constant="51" id="Xz3-lE-WpL"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Hcp-VQ-6lh" secondAttribute="trailing" constant="40" id="Yry-XO-OVh"/>
+                            <constraint firstItem="znx-Ar-0TT" firstAttribute="leading" secondItem="HTW-9g-l9J" secondAttribute="leadingMargin" constant="49" id="bAX-a1-EDN"/>
                             <constraint firstItem="UCD-Aa-h6x" firstAttribute="top" secondItem="a5L-g6-Sqs" secondAttribute="bottom" constant="45" id="daZ-nE-xO9"/>
                             <constraint firstItem="a5L-g6-Sqs" firstAttribute="top" secondItem="9fJ-c4-QAE" secondAttribute="bottom" constant="20" id="fjH-2b-iQ1"/>
+                            <constraint firstItem="Hcp-VQ-6lh" firstAttribute="width" secondItem="znx-Ar-0TT" secondAttribute="height" multiplier="122:21" id="hvL-uH-BHG"/>
+                            <constraint firstItem="Hcp-VQ-6lh" firstAttribute="leading" secondItem="znx-Ar-0TT" secondAttribute="trailing" id="ipu-pU-IgN"/>
                             <constraint firstItem="a5L-g6-Sqs" firstAttribute="centerX" secondItem="HTW-9g-l9J" secondAttribute="centerX" id="jBx-IX-BF9"/>
+                            <constraint firstItem="znx-Ar-0TT" firstAttribute="top" secondItem="UCD-Aa-h6x" secondAttribute="bottom" constant="51" id="k0S-OA-rwd"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="dateLabel" destination="Hcp-VQ-6lh" id="l37-V6-QHg"/>
                         <outlet property="timeLabel" destination="9fJ-c4-QAE" id="tss-GS-gUP"/>
+                        <outlet property="timeLabel2" destination="znx-Ar-0TT" id="qSk-8Y-D2f"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Np3-rH-OHF" userLabel="First Responder" sceneMemberID="firstResponder"/>

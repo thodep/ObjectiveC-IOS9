@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface TimeCountDown : UIViewController {
-    
+    NSTimer *timer2;
     NSTimer *timer;
     int countInt;
 }
@@ -18,5 +18,8 @@
 - (IBAction)startCountingAction:(id)sender;
 
 - (IBAction)stopCountingAction:(id)sender;
+@property (weak, nonatomic) IBOutlet UILabel *timeLabel2;
+
+@property (weak, nonatomic) IBOutlet UILabel *dateLabel;
 
 @end
